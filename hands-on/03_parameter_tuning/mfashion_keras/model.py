@@ -49,13 +49,18 @@ def train_and_evaluate(output_dir, hparams):
     y_train = tf.keras.utils.to_categorical(y_train, 10)
 
     tensorboard_callback   = tf.keras.callbacks.TensorBoard(log_dir=os.path.join(output_dir, "logs"))
-    earlystopping_callback = ## <TODO> EarlyStoppingを追加しよう
+    ## <TODO> ___にcallbackとして新たにEarlyStoppingを追加しよう
+    ##　<ヒント> https://www.tensorflow.org/api_docs/python/tf/keras/callbacks を参考にしてみてください。
+    earlystopping_callback = tf.keras.callbacks.EarlyStopping(
+        monitor=___,
+        patience=___,
+    )
 
     if hparams["model"] == "dnn":
       model = dnn_model(hparams)
     else:
       model = cnn_model(hparams)
-    model.compile(optimizer=tf.keras.optimizers.Adam(#______,), # <TODO> learning_rateをparmeterから受け取れるようにしよう
+    model.compile(optimizer=tf.keras.optimizers.Adam(#______,), # <TODO> "learning_rate"をparmeterから受け取れるようにしよう
 		  loss=tf.keras.losses.CategoricalCrossentropy(),
 		  metrics=[tf.keras.metrics.CategoricalAccuracy(), tf.keras.metrics.CategoricalCrossentropy()])
     model.fit(X_train, y_train,
