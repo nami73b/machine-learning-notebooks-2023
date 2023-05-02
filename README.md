@@ -14,8 +14,8 @@ Vertex AIやGCS等を使用している部分は、研修以外の環境でや�
 
 ## ハンズオン目次
 - 01_image_classification
-    - 01ex_pruning
-- 02_deploy_and_serving
-- 03_parameter_tuning
-- 04_transfer_learning
-- 05_predict_structured_data  (データセットが社外秘のため研修での利用限定)
+  - 01ex_pruning
+- 02_transfer_learning
+- 03_deploy_and_serving
+  - 03ex_parameter_tuning
+- 04_predict_structured_data  (データセットが社外秘のため研修での利用限定)
