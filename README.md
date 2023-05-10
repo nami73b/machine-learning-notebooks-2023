@@ -13,6 +13,7 @@ Vertex AIやGCS等を使用している部分は、研修以外の環境でや�
 ブランチを`solutions`に切り替えると、各ハンズオンの答えがあるので、どうしても困った時は参考にしてください。
 
 ## ハンズオン目次
+- 00_intro_jupyter_notebook
 - 01_image_classification
     - 01ex_pruning
 - 02_deploy_and_serving
